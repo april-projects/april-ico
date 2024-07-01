@@ -50,11 +50,11 @@ def main():
     # You can change this to any directory you want to scan
     base_path = "."
     # Add directories to ignore here
-    ignore_dirs = ['.git', '.github']
+    ignore_dirs = ['.idea', '.git', '.github']
     # Add files to ignore here
     ignore_files = ['main.py', 'README.md', '.gitignore']
     # Base URL for target addresses
-    base_url = "https://cdn.jsdelivr.net/gh/april-projects/april-ico/"
+    base_url = "https://cdn.jsdelivr.net/gh/april-projects/april-ico"
 
     directory_images = scan_directories(base_path, ignore_dirs, ignore_files)
     markdown_content = generate_markdown(directory_images, base_url)
