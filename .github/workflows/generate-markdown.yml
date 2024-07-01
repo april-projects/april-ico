@@ -1,0 +1,43 @@
+name: Generate Markdown
+
+on:
+  push:
+    # Replace with your main branch name if different
+    branches:
+      - main
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  generate-markdown:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python3
+        uses: actions/setup-python@v2
+        with:
+          # Replace with your Python version
+          python-version: '3.12.3'
+
+      - name: Execute Python script
+        # Adjust if your script file name is different
+        run: python main.py
+
+      - name: Commit and push if changes
+        env:
+          GIT_NAME: ${{ secrets.GIT_NAME }}
+          GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+        run: |
+          git config --local user.email $GIT_NAME
+          git config --local user.name $GIT_EMAIL
+          git add README.md
+          git commit -m ":memo: Update README.md with generated content at `date '+%Y-%m-%d %H:%M:%S'`."
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GIT_TOKEN }}
+          branch: main
