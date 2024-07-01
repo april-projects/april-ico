@@ -50,9 +50,9 @@ def main():
     # You can change this to any directory you want to scan
     base_path = "."
     # Add directories to ignore here
-    ignore_dirs = ['.git']
+    ignore_dirs = ['.git', '.github']
     # Add files to ignore here
-    ignore_files = ['main.py', 'README.md']
+    ignore_files = ['main.py', 'README.md', '.gitignore']
     # Base URL for target addresses
     base_url = "https://cdn.jsdelivr.net/gh/april-projects/april-ico/"
 
