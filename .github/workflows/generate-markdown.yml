@@ -35,7 +35,7 @@ jobs:
           git config --local user.name $GIT_NAME
           git config --local user.email $GIT_EMAIL
           git add README.md
-          git commit -m ":memo: Update README.md with generated content at `date '+%Y-%m-%d %H:%M:%S'`."
+          git commit -m ":memo: Update README.md with generated content"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:

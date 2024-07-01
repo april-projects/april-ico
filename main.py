@@ -22,8 +22,8 @@ def generate_markdown(directory_images, base_url):
 
     for directory, images in directory_images.items():
         markdown_content += f"## {directory}\n\n"
-        markdown_content += "| " + " | ".join([""] * 3) + " |\n"
-        markdown_content += "| " + " | ".join(["----"] * 3) + " |\n"
+        markdown_content += "| " + " | ".join([""] * 6) + " |\n"
+        markdown_content += "| " + " | ".join(["----"] * 6) + " |\n"
 
         row = []
         for img in images:
@@ -31,13 +31,13 @@ def generate_markdown(directory_images, base_url):
             img_path = os.path.join(directory, img).replace("\\", "/")
             img_url = f"{base_url}/{img_path}"
             row.append(f"![{img}]({img_url})")
-            if len(row) == 3:
+            if len(row) == 6:
                 markdown_content += "| " + " | ".join(row) + " |\n"
                 row = []
 
         if row:
             # Add remaining images in the last row if any
-            while len(row) < 3:
+            while len(row) < 6:
                 row.append("")
             markdown_content += "| " + " | ".join(row) + " |\n"
 
