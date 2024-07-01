@@ -1,11 +1,5 @@
 # 图标列表
 
-## .
-
-|  |  |  |
-| ---- | ---- | ---- |
-| ![.gitignore](https://cdn.jsdelivr.net/gh/april-projects/april-ico//./.gitignore) |  |  |
-
 ## web_icon
 
 |  |  |  |
@@ -25,10 +19,4 @@
 | ![7.ico](https://cdn.jsdelivr.net/gh/april-projects/april-ico//home-ico/7.ico) | ![16.ico](https://cdn.jsdelivr.net/gh/april-projects/april-ico//home-ico/16.ico) | ![1.ico](https://cdn.jsdelivr.net/gh/april-projects/april-ico//home-ico/1.ico) |
 | ![15.ico](https://cdn.jsdelivr.net/gh/april-projects/april-ico//home-ico/15.ico) | ![22.ico](https://cdn.jsdelivr.net/gh/april-projects/april-ico//home-ico/22.ico) | ![3.ico](https://cdn.jsdelivr.net/gh/april-projects/april-ico//home-ico/3.ico) |
 | ![20.ico](https://cdn.jsdelivr.net/gh/april-projects/april-ico//home-ico/20.ico) |  |  |
-
-## .github/workflows
-
-|  |  |  |
-| ---- | ---- | ---- |
-| ![generate-markdown.yml](https://cdn.jsdelivr.net/gh/april-projects/april-ico//.github/workflows/generate-markdown.yml) |  |  |
 
